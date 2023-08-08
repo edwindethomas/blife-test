@@ -18,6 +18,9 @@ const Button = ({
         backgroundColor: isHover ? bgColorHover : bgColor,
         color: isHover ? colorHover : color
     }
+    const iconStyles = {
+        marginLeft:'8px'
+    }
 
     return(
         <button
@@ -26,7 +29,7 @@ const Button = ({
             onMouseLeave={handleIsHover}
         >
             {name}
-            {iconPath !== '' && <img src={iconPath}/>}
+            {iconPath !== '' && <img style={iconStyles} src={iconPath}/>}
         </button>
     )
 }

@@ -97,7 +97,7 @@ button:hover {
     padding-right: 2px;
     white-space: nowrap;
     overflow:hidden;
-    animation: type-steps 2s steps(20),
+    animation: type-steps 7s steps(43) infinite,
     cursor-blink .4s step-end infinite alternate;
 }
 
@@ -129,11 +129,25 @@ button:hover {
     margin-right: .5rem;
 }
 .card__information__item:hover > .card__information__icon  {
-    animation: rotation-animation 5s infinite;
+    animation: mini-translation 5s infinite;
 }
 .card__information__item:hover > .icon__path > * {
     fill: #3D5CFF;
 }
+
+.nav__item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: width .5s;
+}
+
+.nav__item:hover::after {
+    width: 100%;
+}
+
 @keyframes rotation-animation {
    10% {
        transform: rotate(45deg);
@@ -154,6 +168,25 @@ button:hover {
     50% {border-right: transparent}
 }
 
+@keyframes mini-translation {
+    20% {
+        transform: translate(5px,5px);
+    }
+    50% {
+        transform: translate(0,0);
+    }
+    70% {
+        transform: translate(-5px,-5px);
+    }
+
+    90% {
+        transform: translate(0,0);
+    }
+}
+
 @keyframes type-steps{
-    from {width: 0}
+    0% {width: 0}
+    40%{width: 100%}
+    80%{width: 100%}
+    100%{width: 0}
 }

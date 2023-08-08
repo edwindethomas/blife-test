@@ -1,4 +1,5 @@
 import Button from "./Button.jsx";
+import Arrow from '../assets/Arrow.svg'
 
 const BannerInformation = () => {
 
@@ -11,7 +12,7 @@ const BannerInformation = () => {
             <h3 className={'banner__h3'}>
                 Al trained to generate realistic 3D objects.
             </h3>
-            <Button bgColor={'#3D5CFF'} bgColorHover={'#2f4ef1'} name={'Get started'} />
+            <Button iconPath={Arrow} bgColor={'#3D5CFF'} bgColorHover={'#2f4ef1'} name={'Get started'} />
             </div>
         </section>
     );
