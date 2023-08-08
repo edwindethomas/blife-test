@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import Noon from './../assets/noon.svg'
+import {Noon} from './../assets/noon.svg'
 import Button from "./Button.jsx";
 import './../styles/home.css'
 function NavRouter() {
