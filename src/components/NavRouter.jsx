@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import {Noon} from './../assets/noon.svg'
+import Logo from './Logo.jsx'
 import Button from "./Button.jsx";
 import './../styles/home.css'
 function NavRouter() {
@@ -8,7 +8,7 @@ function NavRouter() {
         <nav className={'navigator__container'}>
             <div className={'navigator__wrapper'}>
             <section>
-                <img src={Noon}/>
+                <Logo/>
             </section>
             <ul className={'navigator__links'}>
                 <li className={'nav__item'}><Link className={'nav__item'}><b>Pricing</b></Link></li>
